@@ -25,13 +25,18 @@ const editorHTML = `
         #editor:focus {
           outline: 0px solid transparent;
         }
+
+        #editor:empty::before {
+          content: attr(data-placeholder);
+          font-size: 16px;
+          color: rgba(4, 0, 0, 0.36);
+        }
+        
     </style>
     <title>CN-Editor</title>
 </head>
 <body>
-    <div id="editor">
-       
-    </div>
+    <div id="editor" contentEditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
     <script>
         (function(doc) {
             var editor = document.getElementById('editor');
@@ -93,6 +98,11 @@ const editorHTML = `
             });
 
             document.getElementById("editor").addEventListener("input", function() {
+
+              if(editor.innerHTML === "<br>"){
+                document.getElementById("editor").innerHTML = ''
+              }
+
                 let contentChanged = JSON.stringify({
                     type: 'onChange',
                     data: document.getElementById("editor").innerHTML });
@@ -184,6 +194,9 @@ const editorHTML = `
                   break;
                 case 'setHtml':
                   editor.innerHTML = msgData.value;
+                  break;
+                case 'setPlaceholder':
+                  editor.setAttribute("data-placeholder", msgData.value);
                   break;
                 default: break;
               }
