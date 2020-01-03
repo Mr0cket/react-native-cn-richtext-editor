@@ -292,10 +292,10 @@ export default class CNEditor extends Component {
   }
 
   render() {
-    const html =
-      this.props.cssStyle || this.props.cssContentContainerStyle
-        ? `<head><style>body {${this.props.cssStyle}} div{${this.props.cssContentContainerStyle}}</style></head>${htmlEditor}`
-        : htmlEditor;
+    const html = this.props.cssStyles
+      ? `<head><style>${this.props.cssStyles}</style></head>${htmlEditor}`
+      : htmlEditor;
+
     return (
       <View style={styles.container} onLayout={this.onLayout}>
         <WebView
@@ -309,7 +309,6 @@ export default class CNEditor extends Component {
           allowFileAccessFromFileURLs={true}
           javaScriptEnabled={true}
           source={{ html }}
-          domStorageEnabled={true}
           mixedContentMode='always'
           onMessage={this.onMessage}
           startInLoadingState={this.props.startInLoadingState}

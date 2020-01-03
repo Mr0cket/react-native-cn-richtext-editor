@@ -237,18 +237,17 @@ Also be noticed that this example is writen with expo and required 'react-native
 
 #### Props
 
-| Name                     | Description                                                                                     | Required |
-| ------------------------ | ----------------------------------------------------------------------------------------------- | -------- |
-| onSelectedTagChanged     | this event triggers when selected tag of editor is changed.                                     | No       |
-| onSelectedStyleChanged   | this event triggers when selected style of editor is changed.                                   | No       |
-| initialHtml              | initial html string to display in editor                                                        | No       |
-| styleList                | an object consist of styles name and values (use getDefaultStyles function)                     | Yes      |
-| webViewStyle             | Styles applied to the WebView component.                                                        | No       |
-| cssStyle                 | Styles applied to the body element of the html component - should be a css inline style string. | No       |
-| cssContentContainerStyle | Styles applied to the content div of the html component - should be a css inline style string.. | No       |
-| autoFocus                | If set to true, sets focus on the editor upon initial load. Default is false.                   | No       |
-| placeHolder              | String to be used as the placeholder.                                                           | No       |
-| onValueChanged           | this event triggers when value of editor is changed.                                            | No       |
+| Name                   | Description                                                                               | Required |
+| ---------------------- | ----------------------------------------------------------------------------------------- | -------- |
+| onSelectedTagChanged   | this event triggers when selected tag of editor is changed.                               | No       |
+| onSelectedStyleChanged | this event triggers when selected style of editor is changed.                             | No       |
+| initialHtml            | initial html string to display in editor                                                  | No       |
+| styleList              | an object consist of styles name and values (use getDefaultStyles function)               | Yes      |
+| webViewStyle           | Styles applied to the WebView component.                                                  | No       |
+| cssStyles              | Styles applied to the html content of the webview - should be a css inline styles string. | No       |
+| autoFocus              | If set to true, sets focus on the editor upon initial load. Default is false.             | No       |
+| placeHolder            | String to be used as the placeholder.                                                     | No       |
+| onValueChanged         | this event triggers when value of editor is changed.                                      | No       |
 
 #### Instance methods
 

@@ -33,8 +33,7 @@ export interface CNEditorProps {
   placeholder?: string;
   textInputStyle?: StyleProp<TextStyle>;
   webViewStyle?: StyleProp<ViewStyle>;
-  cssStyle?: String;
-  cssContentContainerStyle?: String;
+  cssStyles?: String;
   autoFocus?: Boolean;
   startInLoadingState?: Boolean;
 }
