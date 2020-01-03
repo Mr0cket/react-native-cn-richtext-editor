@@ -9,7 +9,7 @@ export default class CNEditor extends Component {
     super(props);
     this.isInit = false;
     this.state = {
-      layoutWidth: 400,
+      layoutWidth: 400
     };
     this.webViewRef = null;
     this._resolve = null;
@@ -141,8 +141,8 @@ export default class CNEditor extends Component {
             height: myHeight,
             width: myWidth,
             alt,
-            align,
-          },
+            align
+          }
         });
 
         if (this.webViewRef) {
@@ -164,8 +164,8 @@ export default class CNEditor extends Component {
           height: myHeight,
           width: myWidth,
           alt,
-          align,
-        },
+          align
+        }
       });
 
       if (this.webViewRef) {
@@ -199,7 +199,7 @@ export default class CNEditor extends Component {
       const jsonString = JSON.stringify({
         type: 'editor',
         command: 'setPlaceholder',
-        value: this.props.placeholder,
+        value: this.props.placeholder
       });
       if (this.webViewRef) {
         this.webViewRef.postMessage(jsonString);
@@ -211,7 +211,7 @@ export default class CNEditor extends Component {
     const { width } = event.nativeEvent.layout;
 
     this.setState({
-      layoutWidth: width,
+      layoutWidth: width
     });
   };
 
@@ -223,7 +223,7 @@ export default class CNEditor extends Component {
       jsonString = JSON.stringify({
         type: 'toolbar',
         command: 'color',
-        value: styleList[tool].color,
+        value: styleList[tool].color
       });
     } else if (
       tool === 'pink_hl' ||
@@ -236,7 +236,7 @@ export default class CNEditor extends Component {
       jsonString = JSON.stringify({
         type: 'toolbar',
         command: 'highlight',
-        value: styleList[tool].backgroundColor,
+        value: styleList[tool].backgroundColor
       });
     } else {
       jsonString = JSON.stringify({ type: 'toolbar', command: tool });
@@ -322,9 +322,9 @@ export default class CNEditor extends Component {
 
 let styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   webView: {
-    flexGrow: 1,
-  },
+    flexGrow: 1
+  }
 });
