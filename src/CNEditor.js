@@ -205,6 +205,10 @@ export default class CNEditor extends Component {
         this.webViewRef.postMessage(jsonString);
       }
     }
+
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
   };
 
   onLayout = event => {
