@@ -312,6 +312,7 @@ export default class CNEditor extends Component {
           mixedContentMode='always'
           onMessage={this.onMessage}
           startInLoadingState={this.props.startInLoadingState}
+          renderLoading={this.props.renderLoading}
           renderError={error => console.log('error:', error)}
         />
       </View>
