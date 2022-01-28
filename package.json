@@ -15,8 +15,8 @@
     "xmldom": "^0.1.27"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*",
+    "react": "^17.0.1",
+    "react-native": "^0.57.5",
     "react-native-webview": "*"
   },
   "keywords": [
