@@ -1,5 +1,7 @@
 # react-native-cn-richtext-editor
 
+> ## Deprecated. Use [react-native-cn-quill](https://github.com/imnapo/react-native-cn-quill#readme) instead.
+
 Richtext editor for react native
 
 <img src="./images/demo-img.jpg" width="50%">
@@ -17,8 +19,6 @@ npm i react-native-cn-richtext-editor@next
 ```
 yarn add react-native-cn-richtext-editor@next
 ```
-
-This package is using `react-native-webview`. Please follow [this document](https://github.com/react-native-community/react-native-webview/blob/master/docs/Getting-Started.md) to install it.
 
 ### Usage
 
